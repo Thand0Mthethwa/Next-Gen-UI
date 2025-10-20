@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import '../../assets.dart';
+import '../styles.dart';
 
 class TitleScreen extends StatelessWidget{
   const TitleScreen({super.key});
 
+  final _finalRecievedLightAmt = 0.7;
+  final _finalEmitLightAmt = 0.5;
+
   @override
   Widget build(BuildContext context) {
+    final orbColor = AppColors.orbColors[0];
+    final emitColor = AppColors.emitColors[0];
+
     return Scaffold(
-      backgroundColor: const Color.fromARGB(176, 0, 0, 0),
+      backgroundColor: const Color.fromARGB(172, 0, 0, 0),
       body: Center(
         child: Stack( 
           children: [
@@ -15,26 +22,38 @@ class TitleScreen extends StatelessWidget{
             Image.asset(AssetPaths.titleBgBase),
 
             ///Bg-Recieve
-            Image.asset(AssetPaths.titleBgReceive),
+            _LitImage(color: orbColor,
+            imgSrc: AssetPaths.titleBgReceive,
+            lightAmt: _finalRecievedLightAmt),
             
             ///Mg-Base
-            Image.asset(AssetPaths.titleMgBase),
+            _LitImage(color: orbColor, 
+            imgSrc: AssetPaths.titleMgBase, 
+            lightAmt:_finalRecievedLightAmt),
 
             ///Mg-Recieve
-            Image.asset(AssetPaths.titleMgReceive),
+            _LitImage(color: orbColor,
+             imgSrc: AssetPaths.titleMgReceive, 
+             lightAmt: _finalRecievedLightAmt),
 
             ///Mg-Emit
-            Image.asset(AssetPaths.titleMgEmit),
+            _LitImage(color: emitColor, 
+            imgSrc: AssetPaths.titleMgEmit, 
+            lightAmt: _finalRecievedLightAmt),
             
             ///Fg-Rocks
             Image.asset(AssetPaths.titleFgBase),
             
             ///Fg-Receive
-            Image.asset(AssetPaths.titleFgReceive),
+            _LitImage(color: orbColor, 
+            imgSrc: AssetPaths.titleFgReceive, 
+            lightAmt: _finalRecievedLightAmt),
 
             ///Fg-Emit
-            Image.asset(AssetPaths.titleFgEmit),
-          ],
+            _LitImage(color: emitColor, 
+            imgSrc: AssetPaths.titleFgEmit, 
+            lightAmt: _finalRecievedLightAmt),
+          ]
         ),
       ),
     );
