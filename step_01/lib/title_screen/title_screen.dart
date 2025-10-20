@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../assets.dart';
 import '../styles.dart';
+import 'title_screen_ui.dart';
 
 class TitleScreen extends StatelessWidget{
   const TitleScreen({super.key});
@@ -53,7 +54,11 @@ class TitleScreen extends StatelessWidget{
             _LitImage(color: emitColor, 
             imgSrc: AssetPaths.titleFgEmit, 
             lightAmt: _finalRecievedLightAmt),
-          ]
+
+            const Positioned.fill(
+              child: TitleScreenUi(),
+            ),
+          ],
         ),
       ),
     );
