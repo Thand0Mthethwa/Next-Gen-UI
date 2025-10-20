@@ -40,3 +40,12 @@ class TitleScreen extends StatelessWidget{
     );
   }
 }
+
+class _LitImage extends StatelessWidget {
+  const _LitImage({
+    required this.color,
+    required this.imgSrc,
+    required this.lightAmt,
+  });
+  
+}
