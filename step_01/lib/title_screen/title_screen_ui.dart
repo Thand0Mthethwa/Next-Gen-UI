@@ -30,3 +30,12 @@ class TitleScreenUi extends StatelessWidget {
     );
   }
 }
+
+class _TitleText extends StatelessWidget {
+  const _TitleText();
+
+@override
+  Widget build(BuildContext context) {
+    throw UnimplementedError();
+  }
+}
