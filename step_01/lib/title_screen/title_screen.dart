@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../assets.dart';
+import '../../assets.dart';
 
 class TitleScreen extends StatelessWidget{
   const TitleScreen({super.key});
@@ -7,7 +7,7 @@ class TitleScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color.fromARGB(176, 0, 0, 0),
       body: Center(
         child: Stack( 
           children: [

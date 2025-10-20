@@ -6,9 +6,10 @@ import 'dart:io' show Platform;
 
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
+import 'package:next_gen_ui/title_screen/title_screen.dart';
 import 'package:window_size/window_size.dart';
 
-import 'styles.dart';
+import 'title_screen/title_screen.dart';
 
 void main() {
   if (!kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS)) {
@@ -26,14 +27,8 @@ class NextGenApp extends StatelessWidget {
     return MaterialApp(
       themeMode: ThemeMode.dark,
       darkTheme: ThemeData(brightness: Brightness.dark),
-      home: Scaffold(
-        body: Center(
-          child: Text(
-            'Next-Generation UI ...',
-            style: TextStyles.h2,
-          ),
-        ),
-      ),
+      home: const TitleScreen()
+
     );
   }
 }
