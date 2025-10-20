@@ -29,7 +29,7 @@ class NextGenApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: Text(
-            'Insert Next-Generation UI Here...',
+            'Next-Generation UI ...',
             style: TextStyles.h2,
           ),
         ),
