@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_animate/flutter_animate.dart';
 import '../assets.dart';
 import '../styles.dart';
 import 'title_screen_ui.dart';
@@ -56,7 +56,7 @@ class _TitleScreenState extends State<TitleScreen> {
               imgSrc: AssetPaths.titleMgBase,
               color: _orbColor,
               lightAmt: _finalReceiveLightAmt,
-            ),
+              ),
 
             /// Mg-Receive
             _LitImage(
